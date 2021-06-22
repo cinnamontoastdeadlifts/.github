@@ -3,7 +3,6 @@
     "description": "initiate a Veracode Static Analysis Pipeline scan, return a results.json and convert to SARIF for upload as a code scanning alert",
     "iconName": "veracode",
     "categories": [
-        "Go"
     ],
     "filePatterns": [
     ]
