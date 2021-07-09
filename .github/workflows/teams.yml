@@ -10,8 +10,8 @@ on:
      - 'master'
 
 jobs:
-  success:
-    name: One with everything
+  notify:
+    name: notify on change
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
@@ -20,7 +20,3 @@ jobs:
         if: always()
         with:
           webhook_url: ${{ secrets.MSTEAMS_WEBHOOK }}
-          needs: ${{ toJson(needs) }}
-          job: ${{ toJson(job) }}
-          steps: ${{ toJson(steps) }}
-          dry_run: True
