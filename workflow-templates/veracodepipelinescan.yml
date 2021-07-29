@@ -63,9 +63,7 @@ jobs:
       with: # Path to SARIF file relative to the root of the repository
         sarif_file: veracode-results.sarif
 
-    - name: notify teams
-      uses: actions/checkout@master
-      name: Microsoft Teams Notification
+    - name: Microsoft Teams Notification
       uses: skitionek/notify-microsoft-teams@master
       if: always()
       with:
