@@ -62,12 +62,10 @@ jobs:
       uses: github/codeql-action/upload-sarif@v1
       with: # Path to SARIF file relative to the root of the repository
         sarif_file: veracode-results.sarif
-  notify:
-    name: notify teams
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@master
-      - name: Microsoft Teams Notification
+
+    - name: notify teams
+      uses: actions/checkout@master
+      name: Microsoft Teams Notification
         uses: skitionek/notify-microsoft-teams@master
         if: always()
         with:
